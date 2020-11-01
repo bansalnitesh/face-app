@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Get User Media Code Along!</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+</head>
+<body>
+    <header>
+    </header>
+    
+    <main>
+        <div id="control_all" class="col-md-2 sidebar">
+            <h2>Filters</h2>
+        <form class="controla">
+            <h2>Colour Range Selector</h2>
+            <fieldset class="rgb">
+                <label for="rmin">Red Min:</label>
+                <input  class="range red " id="formControlRange" type="range" min=0 max=255 value=0 name="rmin">
+                <label for="rmax">Red Max:</label>
+                <input  class="range red" id="formControlRange" type="range" min=0 max=255 value=255 name="rmax">
+            </fieldset>
+            
+            <fieldset class="rgb">
+                <label for="gmin">Green Min:</label>
+                <input class="range"  id="formControlRange" type="range" min=0 max=255 value=0 name="gmin">
+                <label for="gmax">Green Max:</label>
+                <input  class="range"  id="formControlRange" type="range" min=0 max=255 value=255 name="gmax">
+            </fieldset>
+            
+            <fieldset class="rgb">
+                <label for="bmin">Blue Min:</label>
+                <input  class="range blue"  id="formControlRange" type="range" min=0 max=255 value=0 name="bmin">
+                <label for="bmax">Blue Max:</label>
+                <input  class="range blue"  id="formControlRange" type="range" min=0 max=255 value=255 name="bmax">
+            </fieldset>
+        </form>
+        <button id="camButton" class="btn btn-lg"><i class="fa far fa-camera"></i></button>
+            <form class="controla">
+                <fieldset>
+                    <h2>Effects Selection</h2>
+                    <div>
+                        <input type="button" class="btn button btn-danger btn-lg" id="redEffect" value="Red Filter">
+                        <input type="button" class="btn button btn-lg" id="splitEffect" value="Split Filter">
+                        <input type="button"  class="btn button btn-secondary btn-lg" id="imageNegative" value="Negatives">
+                        <input type="button"  class="btn button btn-warning btn-lg" id="sunny" value="Sun Shade">
+                        <input type="button"  class="btn button btn-success btn-lg" id="greenScreenEffect" value="Green Sc.">
+                    </div>
+                </fieldset>
+            </form>
+            <button id="ifDraw" class="btn btn-lg"><i class="fa far fa-paint-brush"></i></button>
+            <form class="controla">
+                <fieldset>
+                    <h2>Draw</h2>
+                    <p class="font-italic">Toggle on the brush button above to use them.</p>
+                </fieldset>
+                    <select class="form-control" id="color-picker">
+                        <option value="black" selected>Black</option>
+                        <option value="red">Red</option>
+                        <option value="blue">Blue</option>
+                        <option value="green">Green</option>
+                    </select>
+                    <select class="form-control" id="thickness-picker">
+                        <option value=1>1</option>
+                        <option value=2>2</option>
+                        <option value=3 selected>3</option>
+                        <option value=4>4</option>
+                        <option value=5>5</option>
+                        <option value=6>6</option>
+                        <option value=7>7</option>
+                        <option value=8>8</option>
+                        <option value=9>9</option>
+                        <option value=10>10</option>
+                    </select>
+                    <button  class="btn button btn-light btn-lg" id="erase"><i class="fa fa-fw fa-eraser"></i></button>
+            </form>
+    </div>
+        <article id="feeds">
+            <div>
+                <video class="player">
+                    <h2>Original Feed</h2>
+                </video>
+            </div>
+            <div>
+                <canvas class="photo">
+                </canvas>
+            </div>
+            <svg id="draw">
+            </svg>
+        </article>
+        <div class="strip" class="col-md-3 sidebar">
+            <form class="controla">
+                <h2>Stickers</h2>
+                <p class="font-italic">Toggle on the sticker to use them.</p>
+            <img id="drag1" src="smiley.png" />
+        </form>
+            <h2>Gallery</h2>
+            <div class="strip-insider"></div>
+        </div>
+    </main>
+
+    <audio class="snap" src="snap.mp3" hidden></audio>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

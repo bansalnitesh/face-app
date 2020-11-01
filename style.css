@@ -1,0 +1,178 @@
+html {
+    box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 10px;
+}
+body{
+    width: 100%;
+    background-color: #fff !important;
+
+}
+main{
+    display: flex !important;
+    justify-content: space-between;
+    align-self: center;
+}
+h1{
+    margin: 0 auto;
+    font-size: 6em;
+    text-align: center;
+}
+h2{
+    margin: 0 auto;
+    font-size: 5em;
+    text-align: center;
+}
+#controls{
+    display: flex;
+    padding-bottom: 20px;
+}
+.range {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 5px;
+    border-radius: 1.5px;
+    background: #fff;
+    outline: none;
+    opacity: 0.8;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  
+  .range:hover {
+    opacity: 1;
+  }
+  
+  .range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: green;
+    cursor: pointer;
+    border: none;
+  }
+  .red::-webkit-slider-thumb{
+    background: red !important;
+}
+.blue::-webkit-slider-thumb{
+    background: blue !important;
+}
+.red::-moz-range-thumb {
+    background: red !important;
+}
+.blue::-moz-range-thumb {
+    background: blue !important;
+}
+.container{
+    background-color: brown;
+}
+  .range::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+    border: none;
+  }
+#control_all, .strip{
+    background-color: #1e282d !important;
+    color: white !important;
+}
+#camButton, #ifDraw{
+    background: #fff;
+    color: black;
+    font-size: 20px !important;
+    padding: 3px;
+    width: 180px;
+    margin: 10px;
+}
+#drag1{
+    background: none;
+    cursor: pointer;
+}
+.sticlicked{
+    background: #1e282d !important;
+}
+.button{
+    margin-top: 10px;
+    width: 80px;
+    font-weight: 500 !important;
+}
+.controla{
+background: #263238;
+border-radius: 7px;
+padding: 10px !important;
+margin-top: 10px;
+}
+#splitEffect{
+    background-image: linear-gradient(to right, rgba(0,0,255) 0%, rgba(0,255,0) 51%, rgba(0,0,255) 100%);
+    color: white;
+    background-size: 150% auto;
+}
+/* *code for the photo image*/
+
+.photo {
+    height: 100vh;
+    background-image: url(background.jpg);
+}
+#draw{
+    z-index: 9999;
+    position: absolute;
+    top: 0px;
+    left: 300px;
+}
+/* *live video feed*/
+.player {
+    width: 654px;
+    display: none;
+}
+
+/*
+    Strip!
+  */
+.strip {
+    padding: 1rem;
+    padding-left: 6rem;
+    padding-right: 6rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.strip img {
+    width: 100px;
+    overflow-x: scroll;
+    padding: 0.8rem 0.8rem 2.5rem 0.8rem;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    background: white;
+}
+
+.strip a:nth-child(5n+1) img {
+    transform: rotate(10deg);
+}
+
+.strip a:nth-child(5n+2) img {
+    transform: rotate(-2deg);
+}
+
+.strip a:nth-child(5n+3) img {
+    transform: rotate(8deg);
+}
+
+.strip a:nth-child(5n+4) img {
+    transform: rotate(-11deg);
+}
+
+.strip a:nth-child(5n+5) img {
+    transform: rotate(12deg);
+}
